@@ -1,0 +1,38 @@
+"dependencies": {
+    "body-parser": "1.20.2",
+
+    Los desarrolladores quienes implementan servidores, 
+    requieren frecuentemente accesar a la 
+    información del cuerpo de dicha petición.
+
+    "cors": "2.8.5",
+
+    Es un mecanismo que utiliza cabeceras HTTP adicionales para permitir 
+    que un user agent obtenga permiso para acceder a recursos seleccionados 
+    desde un servidor, en un origen distinto (dominio) al que pertenece.
+
+    "express": "4.18.2",
+
+    Espress.js, según sus creadores, es un framework de desarrollo de aplicaciones 
+    web minimalista y flexible para Node.js". Está inspirado en Sinatra, 
+    además es robusto, rápido, flexible y muy simple. Entre otras características, 
+    ofrece Router de URL (Get, Post, Put …), 
+    facilidades para motores de plantillas (Jade, EJS, JinJS …), 
+    Middeleware via Connect y un buen test coverage
+
+    "mssql": "9.1.1"
+
+    Para poder hacer conexiones y queries a SQL SERVER
+},
+"devDependencies": {
+    "nodemon": "3.0.1
+
+    Nodemon es una utilidad que monitorea los cambios en el código fuente que se esta 
+    desarrollando y automáticamente re inicia el servidor.
+},
+
+
+
+node -v
+
+npm init -y
