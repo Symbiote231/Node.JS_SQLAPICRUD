@@ -19,7 +19,7 @@ async function getContactoID(idContacto) {
     try {
         let pool = await sql.connect(config);
         let contactos =  await pool.request()
-        .input('idContacto', sql.Int, idContacto)
+        .input('IDContacto', sql.Int, idContacto)
         .execute("sp_ObtenerContacto");
         return contactos.recordsets;
 
@@ -61,9 +61,25 @@ async function updateContacto(contacto) {
     }
 }
 
+/* TODO: ELIMINAR CONTACTO */
+async function deleteContacto(idContacto) {
+    try {
+        let pool = await sql.connect(config);
+        let deleteCon =  await pool.request()
+        .input('IDContacto', sql.Int, idContacto)
+        .execute("sp_EliminarContacto");
+        return deleteCon.recordsets;
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
 module.exports = {
     getContactos : getContactos,
     getContactoID : getContactoID,
     insertContacto : insertContacto,
-    updateContacto : updateContacto
+    updateContacto : updateContacto,
+    deleteContacto : deleteContacto
 }
