@@ -1,0 +1,23 @@
+API iniciada en el puerto: \\.\pipe\ee37c558-5b58-4933-9ad0-3010f049852a
+ConnectionError: Login failed for user 'sa'.
+    at D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\mssql\lib\tedious\connection-pool.js:70:17
+    at Connection.onConnect (D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\tedious\lib\connection.js:1012:9)
+    at Object.onceWrapper (events.js:422:26)
+    at Connection.emit (events.js:315:20)
+    at Connection.emit (D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\tedious\lib\connection.js:1040:18)
+    at D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\tedious\lib\connection.js:2519:18
+    at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+  code: 'ELOGIN',
+  originalError: ConnectionError: Login failed for user 'sa'.
+      at Login7TokenHandler.onErrorMessage (D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\tedious\lib\token\handler.js:245:19)
+      at Readable.<anonymous> (D:\Tests\Projects\NodeJS_SQLAPICRUD\node_modules\tedious\lib\token\token-stream-parser.js:26:33)
+      at Readable.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+      at readableAddChunk (internal/streams/readable.js:284:9)
+      at Readable.push (internal/streams/readable.js:223:10)
+      at next (internal/streams/from.js:88:29)
+      at processTicksAndRejections (internal/process/task_queues.js:93:5) {
+    code: 'ELOGIN',
+    isTransient: undefined
+  }
+}
