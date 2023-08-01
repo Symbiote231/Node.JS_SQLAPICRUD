@@ -60,6 +60,10 @@ router.route('/contactos').get((request, response) => {
  *      parameters:
  *        - in: path
  *          name: id
+ *          schema:
+ *              type: int
+ *          required: true
+ *          description: ID int para obetener el contacto
  *      responses:
  *          '200':
  *              description: Contacto obtenido correctamente
@@ -130,6 +134,28 @@ router.route('/contacto/insertar').post((request, response) => {
 router.route('/contacto/actualizar').put((request, response) => {
     let contacto = {...request.body}
     dbcontacto.updateContacto(contacto).then(result => {
+        response.json(result[0])
+    });
+})
+
+/**
+ * @swagger
+ * /api/contacto/eliminar/{id}:
+ *  delete:
+ *      description: Use para eliminar un contacto de la BD
+ *      parameters:
+ *        - in: path
+ *          name: id
+ *          schema:
+ *              type: int
+ *          required: true
+ *          description: ID int para eliminar contacto
+ *      responses:
+ *          '200':
+ *              description: Contacto eliminado correctamente
+ */
+router.route('/contacto/eliminar/:id').delete((request, response) => {
+    dbcontacto.deleteContacto(request.params.id).then(result => {
         response.json(result[0])
     });
 })
