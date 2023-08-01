@@ -1,6 +1,6 @@
 const config = {
   user: 'sa',
-  password: 'SteamUplay2310.',
+  password: 'SuperAdmin2310.',
   server: '192.168.100.53', // Replace 'YourMachineName' with the actual hostname of your SQL Server machine
   database: 'DBCONTACTO', // Replace 'YourDatabaseName' with the name of your database
   options: {

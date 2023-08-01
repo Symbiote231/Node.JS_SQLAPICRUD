@@ -1,0 +1,1 @@
+API iniciada en el puerto: \\.\pipe\0741acf9-8b7b-44d9-9fe9-6b87b7c2d86f
